@@ -26,6 +26,9 @@ export function useWindowManager() {
   const closeWindow = (id: AppID) => {
     setWindows(prev => prev.filter(w => w.id !== id))
   }
+  const resetDesktop = () => {
+    setWindows([])
+  }
 
   const bringToFront = (id: AppID) => {
     setWindows(prev =>
@@ -41,6 +44,8 @@ export function useWindowManager() {
     openWindow,
     bringToFront,
     closeWindow,
+    resetDesktop,
   }
+
 
 }

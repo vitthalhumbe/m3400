@@ -1,5 +1,6 @@
 "use client"
 
+import ProjectsApp from "@/components/apps/ProjectsApp"
 import AboutApp from "@/components/apps/AboutApp"
 import type { AppID } from "@/types/window"
 import { motion } from "framer-motion"
@@ -44,7 +45,7 @@ export default function AppWindow({
       {/* Content placeholder */}
      <div className="flex-1 overflow-hidden">
   {id === "about" && <AboutApp />}
-  {id === "projects" && <div className="p-4">Projects coming soon</div>}
+  {id === "projects" && <ProjectsApp/>}
   {id === "mission34" && <div className="p-4">Mission34 in progress</div>}
   {id === "contact" && <div className="p-4">Contact details here</div>}
 </div>

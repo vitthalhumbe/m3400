@@ -5,9 +5,13 @@ import Dock from "./Dock"
 import AppWindow from "@/components/windows/AppWindow"
 
 export default function Desktop() {
-  const { windows, openWindow, bringToFront, closeWindow } =
-    useWindowManager()
-
+  const {
+    windows,
+    openWindow,
+    bringToFront,
+    closeWindow,
+    resetDesktop,
+  } = useWindowManager()
 
   return (
     <div className="relative h-screen w-screen bg-neutral-900 text-white overflow-hidden">
@@ -19,10 +23,9 @@ export default function Desktop() {
           onFocus={bringToFront}
           onClose={closeWindow}
         />
-
       ))}
 
-      <Dock onOpen={openWindow} />
+      <Dock onOpen={openWindow} onHome={resetDesktop} />
     </div>
   )
 }
