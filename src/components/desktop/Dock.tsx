@@ -6,7 +6,6 @@ import {
   User,
   Wrench,
   FolderKanban,
-  Target,
   Award,
   Mail,
   Heart,

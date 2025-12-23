@@ -3,6 +3,9 @@
 import { useState } from "react"
 import { motion } from "framer-motion"
 import Tabs from "@/components/windows/Tabs"
+import AboutHome from "./AboutHome"
+import AboutEducation from "./AboutEducation"
+import AboutStory from "./AboutStory"
 
 const tabs = [
   { id: "home", label: "Home" },
@@ -29,23 +32,11 @@ export default function AboutApp() {
         className="p-4 text-sm text-neutral-300 flex-1 overflow-auto"
       >
 
-        {activeTab === "home" && (
-          <p>
-            Hi, I’m Vitthal. I build systems, not just projects.
-          </p>
-        )}
+        {activeTab === "home" && <AboutHome/>}
 
-        {activeTab === "education" && (
-          <p>
-            AIML Diploma student with strong focus on algorithms and ML fundamentals.
-          </p>
-        )}
+        {activeTab === "education" && <AboutEducation/>}
 
-        {activeTab === "story" && (
-          <p>
-            Mission34 is about disciplined growth — one system at a time.
-          </p>
-        )}
+        {activeTab === "story" && <AboutStory/>}
       </motion.div>
     </div>
   )

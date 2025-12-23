@@ -24,47 +24,46 @@ export default function Tabs({
   return (
     <div className="flex gap-1 border-b border-neutral-700 px-2 py-2">
       {tabs.map(tab => {
-  const isActive = activeTab === tab.id
+        const isActive = activeTab === tab.id
 
-  return (
-    <div
-      key={tab.id}
-      className="relative"
-      onClick={() => onChange(tab.id)}
-    >
-      <motion.div
-        whileHover={!isActive ? { opacity: 0.6 } : {}}
-        className={`flex items-center gap-2 px-3 py-1 rounded-md text-sm cursor-pointer ${
-          isActive
-            ? "text-white"
-            : "text-neutral-400 hover:text-white"
-        }`}
-      >
-        <span>{tab.label}</span>
-
-        {tab.closable && onClose && (
-          <button
-            onClick={e => {
-              e.stopPropagation()
-              onClose(tab.id)
-            }}
-            className="text-neutral-400 hover:text-red-400"
+        return (
+          <div
+            key={tab.id}
+            className="relative"
+            onClick={() => onChange(tab.id)}
           >
-            ✕
-          </button>
-        )}
-      </motion.div>
+            <motion.div
+              whileHover={!isActive ? { opacity: 0.6 } : {}}
+              className={`flex items-center gap-2 px-3 py-1 rounded-md text-sm cursor-pointer ${isActive
+                  ? "text-white"
+                  : "text-neutral-400 hover:text-white"
+                }`}
+            >
+              <span>{tab.label}</span>
 
-      {/* Active underline */}
-      {isActive && (
-        <motion.div
-          layoutId="activeTabIndicator"
-          className="absolute left-0 right-0 -bottom-1 h-[2px] bg-blue-400 rounded"
-        />
-      )}
-    </div>
-  )
-})}
+              {tab.closable && onClose && (
+                <button
+                  onClick={e => {
+                    e.stopPropagation()
+                    onClose(tab.id)
+                  }}
+                  className="text-neutral-400 hover:text-red-400"
+                >
+                  ✕
+                </button>
+              )}
+            </motion.div>
+
+            {/* Active underline */}
+            {isActive && (
+              <motion.div
+                layoutId="activeTabIndicator"
+                className="absolute left-0 right-0 -bottom-1 h-[2px] bg-blue-400 rounded"
+              />
+            )}
+          </div>
+        )
+      })}
 
     </div>
   )
