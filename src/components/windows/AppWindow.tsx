@@ -5,6 +5,7 @@ import ProjectsApp from "@/components/apps/ProjectsApp"
 import AboutApp from "@/components/apps/AboutApp"
 import type { AppID } from "@/types/window"
 import { motion } from "framer-motion"
+import ContactApp from "../apps/ContactApp"
 
 type AppWindowProps = {
   id: AppID
@@ -49,7 +50,7 @@ export default function AppWindow({
   {id === "projects" && <ProjectsApp/>}
   {id === "skills" && <SkillsApp/>}
   {id === "mission34" && <div className="p-4">Mission34 in progress</div>}
-  {id === "contact" && <div className="p-4">Contact details here</div>}
+  {id === "contact" && <ContactApp/>}
 </div>
 
     </motion.div>
