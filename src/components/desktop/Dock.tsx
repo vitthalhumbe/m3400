@@ -34,7 +34,7 @@ const apps: {
 
 export default function Dock({ onOpen, onHome }: DockProps) {
   return (
-    <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-4 bg-neutral-800 px-6 py-3 rounded-2xl">
+    <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-4 bg-neutral-800 px-6 py-3 rounded-2xl z-[9999]">
       
       {apps.map(app => (
         <motion.button
