@@ -1,0 +1,22 @@
+# N-Queen Solution using GENETIC ALGORITHM
+
+**ID** : SP-024
+
+**Github URL** : https://github.com/vitthalhumbe/genetic-N-queen.git   
+
+**Tech Stack** : Python, matplotlib
+
+**Duration** : 2 days
+
+**Goal** : Implement the Genetic Algorithm to solve N-Queen problem as a Optimization problem.
+
+**Why I built this?** 
+- To test my knowledge of Genetic Algorithm.
+- To support the M3403 project.
+
+**Core Idea** : 
+
+idea is to generate the random solution using random generation methods, and then optimize them to maximize the fitness function. The optimization method of genetic algorithm follows the rules and terms of biological _survival of the fittest_ or _law of the natural selection_. Where the some set of process is repeated in loops. they are population -> fitness -> selection -> crossover -> mutation -> next generation.
+
+**Screenshots / Demo** :
+![sp-024](/src/documents/images/sp024-output.png)
