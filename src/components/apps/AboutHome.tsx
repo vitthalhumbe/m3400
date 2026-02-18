@@ -22,9 +22,9 @@ export default function AboutHome() {
           </span>
         </h1>
 
-        <p className="mt-6 text-sm leading-relaxed text-neutral-300">
-          I'm a Computer Science student under the AI/ML domain, focused on
-          building various real life applications & systems in AIML and
+        <p className="mt-6 text-md leading-relaxed text-neutral-300">
+          I'm a Computer Science student passionated about Full-Stack web development and AI-driven applications, 
+          focused on building various real life applications & systems in AIML and
           software engineering. Currently working on my personal mission
           which I call “Mission34” which is the centre house of showing my
           all skills. I prefer understanding core systems beforehand and
