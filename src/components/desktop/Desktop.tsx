@@ -5,7 +5,7 @@ import { useWindowManager } from "@/hooks/useWindowManager"
 import Dock from "./Dock"
 import AppWindow from "@/components/windows/AppWindow"
 import { FileText, FolderGit2, Github, Pause, Music, SkipBack, SkipForward, Play, Linkedin, MapPin, CheckCircle2, Info, } from "lucide-react"
-import backgroundImg from "@/assets/Background.png";
+import backgroundImg from "@/assets/images/Background.png";
 
 const DesktopShortcut = ({ icon: Icon, label, color = "text-blue-400", onClick }: any) => (
     <div
@@ -149,7 +149,7 @@ export default function Desktop() {
               </div>
               <div className="flex-1">
                 <div className="text-xs text-white/50 uppercase font-bold">Projects Done</div>
-                <div className="text-2xl font-bold">5 / 5</div>
+                <div className="text-2xl font-bold">26</div>
                 <div className="w-full h-1 bg-neutral-700 mt-2 rounded-full overflow-hidden">
                   <div className="h-full bg-green-500 w-full" />
                 </div>
@@ -194,7 +194,7 @@ export default function Desktop() {
             />
           </div>
         </div>
-        <div className="absolute bottom-32 left-12 z-10">
+        <div className="absolute bottom-32 right-12 z-10">
           <div className="bg-neutral-900/80 backdrop-blur-md border border-white/10 p-4 rounded-2xl flex items-center gap-4 w-72 shadow-2xl group hover:bg-neutral-800/80 transition-colors">
             <div className={`w-14 h-14 bg-gradient-to-br from-pink-500 to-purple-600 rounded-lg flex items-center justify-center shadow-lg ${isPlaying ? 'animate-pulse' : ''}`}>
               <Music size={24} className="text-white" />

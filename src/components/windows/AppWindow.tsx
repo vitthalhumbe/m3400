@@ -7,6 +7,8 @@ import SkillsApp from "../apps/SkillsApp"
 import ProjectsApp from "@/components/apps/ProjectsApp"
 import AboutApp from "@/components/apps/AboutApp"
 import ContactApp from "../apps/ContactApp"
+import Mission34App from "../apps/Mission34App"
+import Hobbies from "../apps/Hobbies"
 
 type AppWindowProps = {
   id: AppID
@@ -59,10 +61,9 @@ export default function AppWindow({
         {id === "about" && <AboutApp />}
         {id === "projects" && <ProjectsApp />}
         {id === "skills" && <SkillsApp />}
-        {id === "mission34" && (
-          <div className="p-4">Mission34 in progress</div>
-        )}
+        {id === "mission34" && <Mission34App />}
         {id === "contact" && <ContactApp />}
+        {id === "hobbies" && <Hobbies />}
       </div>
     </motion.div>
   )
