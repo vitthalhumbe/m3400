@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Vitthal | Kuron",
+  title: "Vitthal Humbe",
   description: "My personal portfolio website.",
 };
 
