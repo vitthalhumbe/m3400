@@ -86,12 +86,124 @@ export const m34Projects: Project[] = [
 ]
 export const spProjects: Project[] = [
   {
+    id: "SP-030",
+    title: "Fashion MNIST CNN over WEB",
+    description: "To try out the FastAPI, I have built this website. It's a API created for CNN trained in PyTorch.",
+    tech: ["Python", "PyTorch", "FastAPI"],
+    status: "Completed",
+    image: "./icons/30.jpg" 
+  },
+  {
+    id: "SP-029",
+    title: "UwU Commentor",
+    description: "Discalemer : it just for FUN. It is a VSCode extension that converts our boring commands to the ANIME-GIRL stlyed comments.",
+    tech: ["TypeScript"],
+    status: "Completed",
+    image: "./icons/29.jpg" 
+  },
+  {
+    id: "SP-024",
+    title: "N-Queen Solver",
+    description: "To understand the GENETIC Algorithm, I solved this N-Queen problem using this algorithm. Basic, but has visualization to provide insight that it is actually optimizing the solution in each generation.",
+    tech: ["Python", "Matplotlib"],
+    status: "Completed",
+    image: "./icons/24.jpg" 
+  },
+  {
+    id: "SP-023",
+    title: "Snake Game + A*",
+    description: "it's not just a Snake game I built. It has auto play mode, which uses the A* algorithm to determine the path to the target(food). We also can play this game using ASWD keys.",
+    tech: ["Python", "PyGame"],
+    status: "Completed",
+    image: "./icons/23.jpg" 
+  },
+  {
+    id: "SP-022",
+    title: "Personal Fianance Tracker",
+    description: "It is one of the beautiful UI I designed. It is a simple transaction storage, bank management, and other tools such as lending and borrowing money kathabook. It is built using MERN stack.",
+    tech: ["MongoDB", "React.js", "Express.js", "Node.js"],
+    status: "Completed",
+    image: "./icons/22.jpg" 
+  },
+  {
+    id: "SP-021",
+    title: "Physics Simulation",
+    description: "I have decided to simulate physics, but not have decided what to implemented like fluid, gravity,etc.",
+    tech: ["Yet to be decided"],
+    status: "Not started",
+    image: "./icons/21.jpg" 
+  },
+  {
+    id: "SP-020",
+    title: "URL shortner",
+    description: "Simple concept but lengthy project to do. when you have the long URL, you can use this tool to shorten it! just paste your long link on website click 'convert' button and it will give you shortened link mapped directly to your long url. It uses MONGODB to store the long URL and assinges it to the random string of length of 6. and givens back the https://domain.com/<your-shorthen code>.",
+    tech: ["Node.js", "Express.js", "MongoDB"],
+    status: "Completed",
+    image: "./icons/20.jpg" 
+  },
+  {
+    id: "SP-019",
+    title: "File Conversion Tool",
+    description: "Simple CSV to JSON conversion, I did it becuase I wanted to learn the file handling using Multer",
+    tech: ["Node.js", "Express.js", "Multer"],
+    status: "Completed",
+    image: "./icons/19.jpg" 
+  },
+  {
+    id: "SP-018",
+    title: "Resources",
+    description: "It is in planning stage. I want to have the website where all the resources related to learning CSE, AIML, and other things all at in front of us once.",
+    tech: ["Yet to be decided"],
+    status: "Not started",
+    image: "./icons/18.jpg" 
+  },
+  {
+    id: "SP-017",
+    title: "E-waste Hub",
+    description: "It is a first Full stack website I have built. It is a central hub provided to the e-waste collector and disposers. we can list our unused electronic gadgets here, collectors make call with us and then collector collects form us.",
+    tech: ["Node.js", "React.js","Express.js", "MongoDB", "Cloudinary"],
+    status: "Completed",
+    image: "./icons/17.jpg" 
+  },
+  {
+    id: "SP-016",
+    title: "College Website",
+    description: "As a suggestion for our mini-project under course 'Client-Side scripting' course, I were assigned to build college website (static) using HTML, CSS, and JavaScript",
+    tech: ["JavaScript"],
+    status: "Completed",
+    image: "./icons/16.jpg" 
+  },
+  {
+    id: "SP-015",
+    title: "Weather Website",
+    description: "Simple API call is being established to fetch the weather data, and is represented in simple HTML, CSS and JS.",
+    tech: ["JavaScript"],
+    status: "Completed",
+    image: "./icons/15.jpg" 
+  },
+  {
+    id: "SP-014",
+    title: "Calendar",
+    description: "It simply is JS calendar, nothing special about it",
+    tech: ["JavaScript"],
+    status: "Completed",
+    image: "./icons/14.jpg" 
+  },
+  {
+    id: "SP-013",
+    title: "Email Subscribing",
+    description: "It simply creates automatic response to the emails which are being subscribed using API call",
+    tech: ["JavaScript"],
+    status: "Completed",
+    image: "./icons/13.jpg" 
+  },
+  {
     id: "SP-012",
     title: "Currency Convertor GUI",
     description: "The simple java Swing GUI application for Currency Conversion, Available currencies are (Yen, Ruppes, Euro, Dollar)",
     tech: ["Java", "Swing"],
     status: "Completed",
-    image: "https://placehold.co/400x400/10b981/ffffff?text=Currency" 
+    image: "./icons/12.jpg" 
   },
   {
     id: "SP-011",
@@ -99,7 +211,7 @@ export const spProjects: Project[] = [
     description: "The simple java Swing GUI application for Bank management system ",
     tech: ["Java", "Swing", "MySQL"],
     status: "Completed",
-    image: "https://placehold.co/400x400/10b981/ffffff?text=BMS" 
+    image: "./icons/11.jpg" 
   },
   {
     id: "SP-010",
@@ -107,7 +219,7 @@ export const spProjects: Project[] = [
     description: " A simple Java standalone app, CLI app to convert the currencies",
     tech: ["Java"],
     status: "Completed",
-    image: "https://placehold.co/400x400/10b981/ffffff?text=Currency" 
+    image: "./icons/10.jpg" 
   },
   {
     id: "SP-009",
@@ -115,7 +227,7 @@ export const spProjects: Project[] = [
     description: " A simple Java Swing application for managing student records. Includes features for creating, updating, and deleting student information with a user-friendly interface.Resources ",
     tech: ["Java", "Swing"],
     status: "Completed",
-    image: "https://placehold.co/400x400/10b981/ffffff?text=SMS" 
+    image: "./icons/9.jpg " 
   },
   {
     id: "SP-008",
@@ -123,7 +235,7 @@ export const spProjects: Project[] = [
     description: "Java AWT GUI project on GitHub: Student Average Calculator with a user-friendly interface for inputting marks, accompanied by submission and clearing options. Ideal for educational references and learning AWT concepts in Java. ",
     tech: ["Java", "AWT"],
     status: "Completed",
-    image: "https://placehold.co/400x400/10b981/ffffff?text=AVG" 
+    image: "./icons/8.jpg" 
   },
   {
     id: "SP-007",
@@ -131,7 +243,7 @@ export const spProjects: Project[] = [
     description: "WordCounter is a Java utility that efficiently calculates word and character counts in user-inputted strings, providing a handy tool for text analysis and processing tasks. ",
     tech: ["Java"],
     status: "Completed",
-    image: "https://placehold.co/400x400/10b981/ffffff?text=Counter" 
+    image: "./icons/7.jpg" 
   },
   {
     id: "SP-006",
@@ -139,7 +251,7 @@ export const spProjects: Project[] = [
     description: "Python-based Library Management System implemented using the Tkinter GUI toolkit and SQLite for database management. Users can add books and members, search for books, view statistics, and lend books to members. ",
     tech: ["Python", "Tkinter", "SQLite"],
     status: "Completed",
-    image: "https://placehold.co/400x400/10b981/ffffff?text=LMS" 
+    image: "./icons/6.jpg" 
   },
   {
     id: "SP-005",
@@ -147,7 +259,7 @@ export const spProjects: Project[] = [
     description: "Built in Python, Hospital Management System using Tkinter and MySQL for tracking patient information and prescriptions.",
     tech: ["Python", "Tkinter", "MySQL"],
     status: "Completed",
-    image: "https://placehold.co/400x400/10b981/ffffff?text=HMS" 
+    image: "./icons/5.jpg" 
   },
   {
     id: "SP-004",
@@ -155,7 +267,7 @@ export const spProjects: Project[] = [
     description: "It was college course mini-project, I sprint coded this project in 2-3 days.",
     tech: ["Python"],
     status: "Completed",
-    image: "https://placehold.co/400x400/6366f1/ffffff?text=DSA" 
+    image: "./icons/4.jpg" 
   },
   {
     id: "SP-003",
@@ -163,7 +275,7 @@ export const spProjects: Project[] = [
     description: "Simple yet difficult to design the GUI for me, (2022)",
     tech: ["Python", "Tkinter"],
     status: "Completed",
-    image: "https://placehold.co/400x400/6366f1/ffffff?text=TicTac" 
+    image: "./icons/3.jpg" 
   },
   {
     id: "SP-002",
@@ -171,7 +283,7 @@ export const spProjects: Project[] = [
     description: "Built in Python, with Tkinter module, I Built To Do List GUI. In this Project I have used the MySQL database. (Runs only in LocalHost)",
     tech: ["Python", "Tkinter", "MySQL"],
     status: "Completed",
-    image: "https://placehold.co/400x400/10b981/ffffff?text=ToDo" 
+    image: "./icons/2.jpg" 
   },
   {
     id: "SP-001",
@@ -179,7 +291,7 @@ export const spProjects: Project[] = [
     description: "Built in Python, with Tkinter module, I Built Calculator GUI. It was my first GUI app built",
     tech: ["Python", "Tkinter"],
     status: "Completed",
-    image: "https://placehold.co/400x400/10b981/ffffff?text=Calc" 
+    image: "./icons/1.jpg" 
   },
   
 ]

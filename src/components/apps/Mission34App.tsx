@@ -39,7 +39,8 @@ export default function Mission34App() {
                 {/* --- HOME TAB --- */}
                 {activeTab === "home" && (
                     <div className="animate-in fade-in duration-300">
-                        <p className="mb-6 text-neutral-400">My core mission to build 34 high-impact, full-stack applications and systems.</p>
+                        <h2 className="text-2xl font-bold text-white tracking-tight">Mission34 (M34)</h2>
+                            <p className="text-neutral-400 text-sm mt-4 pr-[50%] mb-10">Mission 34 is my long-term build challenge. I decided to build 34 proper, well-documented projects in around 1.5 to 2 years across AI, ML, GenAI, full-stack, and related tech. These are not small practice projects — each one is serious, structured, and portfolio-level. The goal of Mission 34 is to prove my depth as an engineer. Every project will have clean code, proper documentation, GitHub upload, and a dedicated portfolio page. It’s about discipline, consistency, and visible growth — not just learning randomly, but building in a planned way so that by the end, I can clearly show what I’m capable of.</p>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                             {m34Projects.map(project => (
                                 <motion.div key={project.id} onClick={() => openProjectTab(project)} whileHover={{ scale: 1.01 }} whileTap={{ scale: 0.98 }} className="cursor-pointer rounded-xl border border-neutral-700/50 p-5 bg-gradient-to-br from-neutral-800 to-neutral-900 shadow-lg hover:border-neutral-500 transition-all">

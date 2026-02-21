@@ -179,7 +179,8 @@ export default function ProjectsApp() {
                     <div className="animate-in fade-in duration-300">
                         <div className="mb-6">
                             <h2 className="text-2xl font-bold text-white tracking-tight">Simple Projects (SPs)</h2>
-                            <p className="text-neutral-400 text-sm mt-1">A collection of utility tools, scripts, and mini web-apps.</p>
+                            <p className="text-neutral-400 text-sm mt-4 pr-[50%]">SPs means Simple Projects in my system. They are small, focused projects that I complete in around 2–3 days. Each SP is based on just one clear concept — like one ML algorithm, one backend feature, one API integration, or one UI idea. The goal is not to build something huge, but to deeply understand one topic and implement it properly in a practical way.</p>
+                            <p className="text-neutral-400 text-sm mt-3 pr-[50%]">They are different from my Mission 34 projects, which are bigger and long-term. SPs are like quick execution practice — build fast, learn fast, document shortly, and move to the next. I number them like SP-001, SP-002 and keep stacking them. Over time, these small projects improve my fundamentals, confidence, and consistency as an engineer.</p>
                         </div>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -192,7 +193,7 @@ export default function ProjectsApp() {
                                 >
                                     <div className="flex gap-4">
                                         {/* Logo/Image Thumbnail */}
-                                        <div className="w-16 h-16 shrink-0 bg-neutral-900 rounded-lg border border-neutral-700 flex items-center justify-center overflow-hidden relative">
+                                        <div className="w-16 h-16 shrink-0 bg-neutral-900 rounded-[15px] border border-neutral-700 flex items-center justify-center overflow-hidden relative">
                                             {project.image ? (
                                                 <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
                                             ) : (
@@ -204,6 +205,7 @@ export default function ProjectsApp() {
                                             <div className="flex justify-between items-start mb-1">
                                                 <span className="text-xs font-mono text-pink-400 bg-pink-400/10 px-2 py-0.5 rounded">{project.id}</span>
                                                 {project.status === "Completed" && <span className="w-2 h-2 rounded-full bg-green-500 shadow-[0_0_8px_rgba(34,197,94,0.8)]"></span>}
+                                                {project.status === "Not started" && <span className="w-2 h-2 rounded-full bg-yellow-500 shadow-[0_0_8px_rgba(34,197,94,0.8)]"></span>}
                                             </div>
                                             <h3 className="font-semibold text-white text-lg leading-tight">{project.title}</h3>
                                         </div>
@@ -231,7 +233,7 @@ export default function ProjectsApp() {
                     <div key={tab.id} className="animate-in slide-in-from-bottom-2 fade-in duration-300 max-w-3xl text-neutral-300">
                         <div className="flex items-center gap-6 mb-8">
                             {/* Large Logo */}
-                            <div className="w-24 h-24 shrink-0 bg-neutral-800 rounded-2xl border border-neutral-700 flex items-center justify-center overflow-hidden relative shadow-lg">
+                            <div className="w-24 h-24 shrink-0 bg-neutral-800 rounded-[25px] border border-neutral-700 flex items-center justify-center overflow-hidden relative shadow-lg">
                                 {tab.project.image ? (
                                     <img src={tab.project.image} alt={tab.project.title} className="w-full h-full object-cover" />
                                 ) : (
