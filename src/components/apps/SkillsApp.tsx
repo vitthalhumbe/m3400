@@ -12,7 +12,6 @@ export default function SkillsApp() {
   return (
     <div className="flex h-full w-full flex-col">
       
-      {/* TAB HEADER */}
       <div className="flex gap-8 border-b border-neutral-700 px-8 py-3 text-sm">
         <button
           onClick={() => setActiveTab("technical")}
@@ -37,7 +36,6 @@ export default function SkillsApp() {
         </button>
       </div>
 
-      {/* CONTENT */}
       <div className="flex-1 overflow-hidden">
         {activeTab === "technical" && <TechnicalSkills />}
         {activeTab === "soft" && <SoftSkills />}

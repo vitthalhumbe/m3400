@@ -71,7 +71,7 @@ const hobbies = [
     id: "chess",
     title: "Chess",
     description: "Tactical foresight, pattern recognition, and strategic planning on the 64 squares.",
-    icon: Crown, // Using Crown as a stand-in for the King piece
+    icon: Crown,
     color: "text-yellow-100",
     bgColor: "bg-neutral-100/10",
     colSpan: "col-span-1 md:col-span-2 lg:col-span-1",
@@ -81,8 +81,6 @@ const hobbies = [
 export default function Hobbies() {
   return (
     <div className="h-full flex flex-col p-6 overflow-auto bg-neutral-900/50">
-      
-      {/* Header */}
       <div className="mb-8">
         <h2 className="text-3xl font-bold text-white tracking-tight">Beyond the Screen</h2>
         <p className="text-neutral-400 text-sm mt-2 max-w-xl leading-relaxed">
@@ -90,7 +88,6 @@ export default function Hobbies() {
         </p>
       </div>
 
-      {/* Bento Box Grid */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pb-8">
         {hobbies.map((hobby, index) => {
           const Icon = hobby.icon
@@ -103,7 +100,6 @@ export default function Hobbies() {
               whileHover={{ scale: 1.02 }}
               className={`group relative overflow-hidden rounded-2xl border border-neutral-700/50 bg-neutral-800/40 p-6 hover:bg-neutral-800 transition-colors ${hobby.colSpan}`}
             >
-              {/* Background Glow Effect on Hover */}
               <div className={`absolute -right-8 -top-8 h-32 w-32 rounded-full blur-3xl opacity-0 group-hover:opacity-20 transition-opacity duration-500 ${hobby.bgColor}`} />
               
               <div className="relative z-10 flex flex-col h-full justify-between">

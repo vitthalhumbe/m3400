@@ -74,8 +74,7 @@ export default function Mission34App() {
                                 <span key={t} className="text-xs px-2 py-1 bg-pink-500/20 text-pink-300 rounded border border-pink-500/30">{t}</span>
                             ))}
                         </div>
-                        
-                        {/* 2. Action Buttons (including PDF Doc) */}
+                        {tab.project.status == "In Progress" && (<span className="text-xs px-2 py-1 bg-yellow-500/20 text-yellow-300 rounded border border-yellow-500/30">{tab.project.status}</span>)}
                         <div className="flex flex-wrap gap-4 mb-8 border-b border-neutral-800 pb-8">
                             {tab.project.github && (
                                 <a href={tab.project.github} target="_blank" rel="noreferrer" className="flex items-center gap-2 bg-neutral-800 hover:bg-neutral-700 text-white px-4 py-2 rounded-lg transition-colors"><Github size={18} /> Source Code</a>
@@ -89,15 +88,11 @@ export default function Mission34App() {
                                 </button>
                             )}
                         </div>
-
-                        {/* 3. Native PDF Viewer */}
                         {viewingPdf === tab.project.id && tab.project.pdfDocUrl && (
                             <div className="w-full h-[600px] bg-neutral-900 rounded-xl mb-8 border border-neutral-700 overflow-hidden shadow-inner animate-in slide-in-from-top-4">
                                 <iframe src={tab.project.pdfDocUrl} className="w-full h-full" title="PDF Documentation" />
                             </div>
                         )}
-
-                        {/* 4. Formatted Description (Preserves \n newlines) */}
                         <div className="space-y-4">
                             <h3 className="text-xl font-semibold text-white">Overview</h3>
                             <p className="leading-relaxed whitespace-pre-line text-lg text-neutral-400">

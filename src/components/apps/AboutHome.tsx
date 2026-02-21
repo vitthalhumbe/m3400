@@ -6,7 +6,6 @@ export default function AboutHome() {
   return (
     <div className="h-full w-full p-8 flex flex-col md:flex-row items-center justify-center gap-12 overflow-auto">
       
-      {/* LEFT: System Avatar (Profile Picture) */}
       <div className="w-64 h-64 shrink-0 rounded-2xl border border-neutral-700/50 bg-neutral-800/50 shadow-2xl overflow-hidden relative group">
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10" />
         <img
@@ -19,8 +18,6 @@ export default function AboutHome() {
             <span className="text-xs font-mono text-white/90 uppercase tracking-widest">Online</span>
         </div>
       </div>
-
-      {/* RIGHT: System Specs (Details) */}
       <div className="max-w-2xl flex-1">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-violet-500/10 border border-violet-500/20 text-violet-400 text-xs font-mono mb-4 uppercase tracking-widest">
             <Terminal size={14} /> Root User
@@ -37,8 +34,6 @@ export default function AboutHome() {
         <p className="text-base leading-relaxed text-neutral-300 mb-8 bg-neutral-800/30 p-6 rounded-xl border border-white/5 shadow-inner">
           I am a Computer Science student passionate about building real-world applications and systems in AIML and software engineering. Currently executing <strong>"Mission34"</strong>—a personal initiative to build and document 34 unique, high-impact projects. I prefer understanding core systems deeply, starting with architecture and organizing step-by-step.
         </p>
-
-        {/* ROLE TAGS (Look like OS Badges) */}
         <div className="flex flex-wrap gap-3">
           <div className="flex items-center gap-2 rounded-lg bg-neutral-800 border border-neutral-700 px-4 py-2 text-sm text-neutral-200 shadow-sm hover:bg-neutral-700 transition-colors">
             <LayoutTemplate size={16} className="text-pink-400"/> Web Developer

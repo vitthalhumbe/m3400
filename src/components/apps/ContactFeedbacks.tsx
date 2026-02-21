@@ -23,8 +23,6 @@ export default function ContactFeedback() {
   return (
     <div className="h-full w-full overflow-y-auto">      
       <div className="flex min-h-full w-full px-10 py-8 gap-12 justify-around items-center">
-        
-        {/* LEFT TEXT */}
         <div className="flex-1 max-w-xl ">
           <h1 className="text-4xl font-semibold text-white">
             So, How was your experience?
@@ -50,8 +48,6 @@ export default function ContactFeedback() {
             </p>
           )}
         </div>
-
-        {/* RIGHT FORM */}
         <div className="flex-1 max-w-md">
           <div className="flex flex-col gap-6">
             <div>

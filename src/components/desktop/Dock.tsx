@@ -39,25 +39,19 @@ export default function Dock({ onOpen, onHome }: DockProps) {
         <motion.button
           key={app.id}
           onClick={() => onOpen(app.id)}
-          // 1. Smooth scaling without the bounce
           whileHover={{ y: -5, scale: 1.2 }}
           transition={{ duration: 0.15, ease: "easeOut" }}
-          // 2. Added 'group' to trigger the tooltip
           className="relative group w-12 h-12 flex items-center justify-center bg-neutral-700/80 rounded-xl hover:bg-neutral-600 transition-colors"
         >
           {app.icon}
           
-          {/* 3. Custom Instant Tooltip */}
           <span className="absolute -top-12 px-3 py-1.5 bg-neutral-900 text-white/90 text-xs font-medium rounded-lg opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100 transition-all duration-150 pointer-events-none whitespace-nowrap shadow-xl border border-white/10">
             {app.label}
           </span>
         </motion.button>
       ))}
-
-      {/* Vertical Divider */}
       <div className="w-px h-10 bg-neutral-600 self-center mx-1" />
 
-      {/* Home / Desktop */}
       <motion.button
         onClick={onHome}
         whileHover={{ y: -5, scale: 1.2 }}
@@ -66,7 +60,6 @@ export default function Dock({ onOpen, onHome }: DockProps) {
       >
         <Home size={22} />
         
-        {/* Home Tooltip */}
         <span className="absolute -top-12 px-3 py-1.5 bg-neutral-900 text-white/90 text-xs font-medium rounded-lg opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100 transition-all duration-150 pointer-events-none whitespace-nowrap shadow-xl border border-white/10">
           Desktop
         </span>

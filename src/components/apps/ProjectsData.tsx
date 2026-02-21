@@ -1,27 +1,3 @@
-// export type Project = {
-//   id: string
-//   title: string
-//   description: string
-//   tech: string[]
-//   status?: "Featured" | "Completed" | "In Progress"
-// }
-
-// export const projects: Project[] = [
-//   {
-//     id: "m3400",
-//     title: "M3400 – Desktop OS Portfolio",
-//     description: "Desktop OS–style portfolio with custom window manager.",
-//     tech: ["Next.js", "TypeScript", "Tailwind", "Framer Motion"],
-//     status: "Featured",
-//   },
-//   {
-//     id: "myalgo",
-//     title: "M3402 – MyAlgo",
-//     description: "Algorithms and ML implemented from scratch.",
-//     tech: ["Python", "NumPy", "ML"],
-//     status: "In Progress",
-//   },
-// ]
 
 
 export type Project = {
@@ -41,47 +17,51 @@ export const m34Projects: Project[] = [
   {
     id: "m3400",
     title: "M3400 – Desktop OS Portfolio",
-    description: "The Problem: Standard web portfolios are static, boring, and fail to demonstrate actual software engineering and state-management skills.\n\nThe Solution: A fully functional web-based operating system built from scratch, complete with a custom window manager, real-time clock, and simulated file system.\n\nKey Features:\n- Draggable, overlapping windows with Framer Motion.\n- Complex Z-index management and focus-state tracking.\n- Responsive custom dock and glassmorphism UI.",
+    description: "Standard portfolios are boring. When it came time to showcase my work, I wanted recruiters to actually experience my software engineering skills, not just read a bulleted list. So, I built a web-based Operating System from scratch. \n\nUnder the hood, it’s powered by Next.js, TypeScript, and Tailwind, with Framer Motion handling the physics. But on the surface, it functions like a real desktop. I engineered a custom window manager with complex Z-index tracking, a smooth macOS-style dock, and native-feeling applications. You can open up my 'Credentials' app to see my education, open the 'Mission 34' terminal to read my project docs, or check out my 'Hobbies' in a sleek bento-box widget. It was a massive challenge in state management, but the result is a digital space that truly feels like mine.",
     tech: ["Next.js", "TypeScript", "Tailwind", "Framer Motion"],
-    github: "https://github.com/vitthalhumbe/portfolio",
+    github: "https://github.com/vitthalhumbe/m3400",
     live: "https://vitthalhumbe.me",
     status: "Completed",
-    image: "https://placehold.co/400x400/171717/ffffff?text=OS",
-    mediaUrl: "/outputs/m3400-demo.gif", 
-    pdfDocUrl: "/docs/m3400-architecture.pdf" 
+    mediaUrl: "./images/m3400.png"
   },
   {
     id: "m3401",
-    title: "M3401 – Personal Finance Tracker",
-    description: "The Problem: Most finance tracking apps are cluttered with unnecessary features and lack customizable categorizations for college students.\n\nThe Solution: A secure, full-stack web application designed for rapid daily expense logging and visual financial health monitoring.\n\nKey Features:\n- Secure REST API with JWT authentication.\n- Interactive data visualization for monthly expense breakdowns.\n- MongoDB aggregation pipelines for fast analytical querying.",
-    tech: ["React.js", "Node.js", "Express.js", "MongoDB"],
-    github: "https://github.com/vitthalhumbe/finance-tracker",
+    title: "M3401 – Crew",
+    description: "Crew is a Flutter-based mobile productivity app designed to bridge the gap between formal task managers and informal study groups. It allows users to form 'crews' to tackle shared goals together. Whether it's a tight-knit private group of five students grinding through Data Structures and Algorithms, or a massive public community of up to 500 people practicing English fluency, Crew keeps everyone aligned and accountable.\n\nThe app operates on a simple Captain and Member dynamic. The Captain sets the agenda via a high-visibility Notice Board and assigns specific, actionable tasks—complete with descriptions, tips, and links—to the entire group at once. Members receive notifications, complete the tasks, and log their estimated time, eliminating the chaos of traditional group chats.\n\nTo keep motivation high, Crew gamifies the experience with a real-time leaderboard and individual progress bars, making it easy to see who is leading the pack.Additionally, the app tracks a global 'streak' for each user based on the days they complete tasks across all their active crews, rewarding daily consistency and momentum.",
+    tech: ["Flutter", "Dart", "Firebase"],
+    github: "https://github.com/vitthalhumbe/Crew",
+    live: "https://github.com/vitthalhumbe/Crew/releases/tag/app",
     status: "Completed",
-    image: "https://placehold.co/400x400/0ea5e9/ffffff?text=FIN",
-    mediaUrl: "/outputs/m3401-dashboard.png",
-    pdfDocUrl: "/docs/m3401-database-schema.pdf"
-  },
-  {
-    id: "m3404",
-    title: "M3404 – TLDR (AI Summarizer)",
-    description: "The Problem: Processing lengthy academic documents and long lecture videos takes hours of manual review.\n\nThe Solution: An AI-powered web tool utilizing Retrieval-Augmented Generation (RAG) to instantly extract key bullet points and summaries from vast amounts of text.\n\nKey Features:\n- FastAPI backend handling asynchronous LLM requests to prevent UI blocking.\n- Next.js frontend with real-time streaming text responses.\n- PDF document parsing and text chunking pipeline.",
-    tech: ["Next.js", "Python", "FastAPI", "LLMs"],
-    github: "https://github.com/vitthalhumbe/tldr",
-    status: "In Progress",
-    image: "https://placehold.co/400x400/8b5cf6/ffffff?text=AI",
-    mediaUrl: "/outputs/m3404-rag-demo.gif",
-    pdfDocUrl: "/docs/m3404-rag-pipeline.pdf"
+    mediaUrl: "/images/m3401.png",
   },
   {
     id: "m3402",
-    title: "M3402 – MyAlgo Engine",
-    description: "The Problem: Relying solely on high-level machine learning libraries abstracts away the core mathematical mechanics of how models actually learn.\n\nThe Solution: A custom machine learning engine built entirely from scratch without external ML frameworks to master under-the-hood algorithms.\n\nKey Features:\n- High-performance C++ backend for matrix operations and calculations.\n- Intuitive Python frontend interface for model configuration.\n- Custom implementations of foundational ML algorithms.",
+    title: "M3402 – MyAlgo",
+    description: "It is a systems-oriented machine learning project that focuses on implementing **Linear Regression and Artificial Neural Networks (ANN) completely from scratch**, without relying on high-level ML libraries. The core idea of the project is to combine the **usability of Python** with the **performance of C++** by designing a hybrid architecture where Python acts as the user-facing interface and orchestration layer, while computationally intensive operations—such as matrix calculations, gradient descent, forward propagation, and backpropagation—are executed in C++. This design mirrors how real-world ML frameworks operate internally and demonstrates an understanding of both machine learning fundamentals and low-level system optimization.\n\nThe project exposes clean, Python-friendly APIs (for example, `fit()` and `predict()` methods) that internally delegate heavy numerical computation to a C++ backend, ensuring improved execution speed compared to pure Python implementations. By avoiding external ML frameworks and implementing the algorithms manually, the project emphasizes **conceptual clarity, mathematical correctness, and performance awareness**. Overall, MyAlgo serves as a learning-driven yet industry-inspired project that showcases skills in machine learning theory, Python–C++ interoperability, software architecture, and efficient algorithm implementation, making it a strong and distinctive contribution under **Mission 34**.",
+    tech: ["C++", "Python"],
+    github: "https://github.com/vitthalhumbe/MyAlgo",
+    status: "Completed",
+    image: "https://placehold.co/400x400/8b5cf6/ffffff?text=AI",
+    mediaUrl: "/images/m3402.png",
+    pdfDocUrl: "/documents/MyAlgo.pdf"
+  },
+  {
+    id: "m3403",
+    title: "M3403 – FishPond",
+    description: "Fish Pond is an interactive artificial life simulation that explores the concepts of evolution and 'survival of the fittest'. In this digital ecosystem, a group of prey (fish) must survive being hunted by a predator (a shark). Initially, the fish behave chaotically and are easily caught. However, the simulation mimics natural selection: the fish that survive the longest pass their digital 'DNA' down to the next generation. Over time, without being explicitly programmed to do so, you can watch the population evolve entirely on its own. The fish progressively learn to group together into coordinated schools and master complex evasive maneuvers to outsmart the shark, beautifully demonstrating how highly intelligent group behaviors can emerge naturally over time.",
     tech: ["Python", "C++", "NumPy"],
-    github: "https://github.com/vitthalhumbe/myalgo",
-    status: "Featured",
+    github: "https://github.com/vitthalhumbe/fishpond",
+    status: "Completed",
     image: "https://placehold.co/400x400/f59e0b/ffffff?text=ML",
-    mediaUrl: "/outputs/m3402-engine.png",
-    pdfDocUrl: "/docs/m3402-math-whitepaper.pdf"
+    mediaUrl: "/images/m3403.gif",
+    pdfDocUrl: "/documents/FishPond.pdf"
+  },
+  {
+    id: "m3404",
+    title: "M3404 – TLDR",
+    description: "TLDR is an AI-powered study companion designed to turn passive reading into active learning. When showcasing a project in a developer portfolio, it is highly recommended to clearly state the problem you are solving and the core technologies used. For this project, the goal was to help students actually retain information rather than just skimming long PDFs or YouTube lectures. Users can upload their study materials, and the application automatically breaks them down into clear summaries, customizable flashcards, and interactive quizzes. It also features a built-in AI tutor that understands the specific uploaded documents, allowing users to ask direct questions or conduct mock interviews to ensure they are fully prepared for their exams.",
+    tech: ["Python", "RAG", "FastAPI", "LLMs", "React.js"],
+    status: "In Progress"
   }
 ]
 export const spProjects: Project[] = [
@@ -119,7 +99,7 @@ export const spProjects: Project[] = [
   },
   {
     id: "SP-022",
-    title: "Personal Fianance Tracker",
+    title: "Personal Finance Tracker",
     description: "It is one of the beautiful UI I designed. It is a simple transaction storage, bank management, and other tools such as lending and borrowing money kathabook. It is built using MERN stack.",
     tech: ["MongoDB", "React.js", "Express.js", "Node.js"],
     status: "Completed",

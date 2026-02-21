@@ -48,7 +48,6 @@ export default function SoftSkills() {
   return (
     <div className="flex h-full w-full">
       
-      {/* LEFT SIDEBAR */}
       <div className="w-64 shrink-0 px-6 py-8">
         <div className="flex flex-col gap-5">
           {softSkills.map(skill => (
@@ -67,10 +66,8 @@ export default function SoftSkills() {
         </div>
       </div>
 
-      {/* DIVIDER */}
       <div className="w-px bg-neutral-700" />
 
-      {/* CONTENT */}
       <div className="flex-1 px-10 py-8">
         <p className="max-w-3xl text-lg leading-relaxed text-neutral-300">
           {current?.description}

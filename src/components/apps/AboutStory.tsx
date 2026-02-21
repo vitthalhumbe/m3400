@@ -49,8 +49,6 @@ export default function AboutStory() {
 
     return (
         <div className="flex h-full w-full bg-neutral-900/30">
-
-            {/* SIDEBAR (Looks like native app navigation) */}
             <div className="w-64 shrink-0 px-4 py-6 border-r border-neutral-700/50 bg-neutral-900/50">
                 <div className="text-xs font-bold text-neutral-500 uppercase tracking-widest mb-4 px-3">System Logs</div>
                 <div className="flex flex-col gap-1">
@@ -74,12 +72,8 @@ export default function AboutStory() {
                     })}
                 </div>
             </div>
-
-            {/* CONTENT AREA (Looks like a document reader) */}
             <div className="flex-1 overflow-y-auto px-10 py-10 bg-[#1e1e1e]">
                 <div className="max-w-3xl mx-auto">
-                    
-                    {/* Header */}
                     <div className="flex items-center gap-4 mb-8 border-b border-neutral-700/50 pb-6">
                         {Icon && <div className="p-3 bg-neutral-800 rounded-xl border border-neutral-700 shadow-sm"><Icon size={28} className="text-white"/></div>}
                         <h2 className="text-4xl font-bold text-white tracking-tight">
@@ -87,7 +81,7 @@ export default function AboutStory() {
                         </h2>
                     </div>
 
-                    {/* Formatted Text */}
+
                     <div className="prose prose-invert max-w-none">
                         <p className="whitespace-pre-line text-lg leading-loose text-neutral-300">
                             {current?.content}

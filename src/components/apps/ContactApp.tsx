@@ -11,8 +11,6 @@ export default function ContactApp() {
 
   return (
     <div className="flex h-full w-full flex-col">
-      
-      {/* TAB HEADER */}
       <div className="flex gap-8 border-b border-neutral-700 px-8 py-3 text-sm">
         <button
           onClick={() => setActiveTab("home")}
@@ -24,7 +22,7 @@ export default function ContactApp() {
         >
           Home
         </button>
-
+{/* 
         <button
           onClick={() => setActiveTab("feedback")}
           className={`pb-2 transition-colors ${
@@ -34,14 +32,10 @@ export default function ContactApp() {
           }`}
         >
           Feedback
-        </button>
+        </button> */}
       </div>
-
-      {/* CONTENT */}
       <div className="flex-1 overflow-hidden">
         {activeTab === "home" && <ContactHome />}
-
-        {activeTab === "feedback" && <ContactFeedback/>}
       </div>
 
     </div>

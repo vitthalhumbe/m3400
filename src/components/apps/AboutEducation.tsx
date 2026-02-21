@@ -22,7 +22,6 @@ export default function AboutEducation() {
                         transition={{ delay: index * 0.1 }}
                         className="relative group overflow-hidden rounded-2xl border border-neutral-700/50 bg-neutral-800/40 p-6 hover:bg-neutral-800 transition-colors shadow-lg"
                     >
-                        {/* Subtle left border accent */}
                         <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-violet-500 to-pink-500 opacity-50 group-hover:opacity-100 transition-opacity" />
 
                         <div className="flex flex-col md:flex-row gap-6 md:items-start">

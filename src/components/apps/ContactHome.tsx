@@ -29,8 +29,6 @@ const contacts = [
 export default function ContactHome() {
   return (
     <div className="flex h-full w-full items-center justify-around px-[10%] py-[20%]">
-      
-      {/* LEFT CONTENT */}
       <div className="max-w-xl">
         <h1 className="text-5xl font-semibold leading-tight text-white">
           Want to get in touch with me or just want to say hello?
@@ -59,8 +57,6 @@ export default function ContactHome() {
           })}
         </div>
       </div>
-
-      {/* RIGHT ILLUSTRATION */}
       <div className="pointer-events-none">
         <img
           src="/contact-illustration.png"
