@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { motion } from "framer-motion"
 
 const softSkills = [
   {
@@ -41,39 +41,57 @@ const softSkills = [
   },
 ]
 
+// Framer Motion variants for staggered entrance
+const containerVariants = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+}
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  show: { 
+    opacity: 1, 
+    y: 0, 
+    transition: { type: "spring", stiffness: 300, damping: 24 } 
+  },
+}
+
 export default function SoftSkills() {
-  const [active, setActive] = useState(softSkills[0].id)
-  const current = softSkills.find(s => s.id === active)
-
   return (
-    <div className="flex h-full w-full">
-      
-      <div className="w-64 shrink-0 px-6 py-8">
-        <div className="flex flex-col gap-5">
-          {softSkills.map(skill => (
-            <button
-              key={skill.id}
-              onClick={() => setActive(skill.id)}
-              className={`text-left text-lg font-medium transition-colors ${
-                active === skill.id
-                  ? "text-white"
-                  : "text-neutral-500 hover:text-neutral-300"
-              }`}
-            >
+    <div className="h-full w-full overflow-y-auto px-6 py-8 md:px-12 md:py-12 bg-[#0a0a0a]">
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        animate="show"
+        className="mx-auto max-w-5xl grid grid-cols-1 gap-6 md:grid-cols-2"
+      >
+        {softSkills.map((skill) => (
+          <motion.div
+            key={skill.id}
+            variants={itemVariants}
+            whileHover={{ y: -4 }}
+            className="group flex flex-col gap-4 rounded-2xl border border-neutral-800 bg-neutral-900/50 p-6 md:p-8 backdrop-blur-sm transition-all duration-300 hover:border-neutral-600 hover:bg-neutral-800/80 hover:shadow-xl hover:shadow-neutral-900/50"
+          >
+            {/* Card Header */}
+            <h3 className="text-xl font-semibold text-neutral-200 transition-colors duration-300 group-hover:text-white">
               {skill.title}
-            </button>
-          ))}
-        </div>
-      </div>
-
-      <div className="w-px bg-neutral-700" />
-
-      <div className="flex-1 px-10 py-8">
-        <p className="max-w-3xl text-lg leading-relaxed text-neutral-300">
-          {current?.description}
-        </p>
-      </div>
-
+            </h3>
+            
+            {/* Subtle Animated Divider */}
+            <div className="h-[2px] w-12 bg-gradient-to-r from-neutral-700 to-transparent transition-all duration-500 group-hover:w-full group-hover:from-blue-500 group-hover:to-transparent" />
+            
+            {/* Card Content */}
+            <p className="text-base leading-relaxed text-neutral-400 transition-colors duration-300 group-hover:text-neutral-300">
+              {skill.description}
+            </p>
+          </motion.div>
+        ))}
+      </motion.div>
     </div>
   )
 }

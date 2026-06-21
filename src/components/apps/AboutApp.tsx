@@ -8,9 +8,9 @@ import AboutEducation from "./AboutEducation"
 import AboutStory from "./AboutStory"
 
 const tabs = [
-  { id: "home", label: "System Profile" }, 
-  { id: "education", label: "Credentials" },
-  { id: "story", label: "System Logs (Story)" },
+  { id: "home", label: "My Profile" }, 
+  { id: "education", label: "Education" },
+  { id: "story", label: "My Story" },
 ]
 
 export default function AboutApp() {

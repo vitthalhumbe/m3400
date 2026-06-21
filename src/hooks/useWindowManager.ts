@@ -10,14 +10,11 @@ export function useWindowManager() {
       const exists = prev.find(w => w.id === id)
 
       if (exists) {
-        // bring existing window to front
         return prev.map(w =>
-          w.id === id ? { ...w, zIndex: topZ } : w
+          w.id === id ? { ...w, zIndex: topZ, isMinimized: false } : w
         )
       }
-
-      // open new window
-      return [...prev, { id, zIndex: topZ }]
+      return [...prev, { id, zIndex: topZ, isMinimized: false }]
     })
 
     setTopZ(z => z + 1)
@@ -26,6 +23,15 @@ export function useWindowManager() {
   const closeWindow = (id: AppID) => {
     setWindows(prev => prev.filter(w => w.id !== id))
   }
+
+  const minimizeWindow = (id: AppID) => {
+    setWindows(prev =>
+      prev.map(w =>
+        w.id === id ? { ...w, isMinimized: true } : w
+      )
+    )
+  }
+
   const resetDesktop = () => {
     setWindows([])
   }
@@ -33,7 +39,7 @@ export function useWindowManager() {
   const bringToFront = (id: AppID) => {
     setWindows(prev =>
       prev.map(w =>
-        w.id === id ? { ...w, zIndex: topZ } : w
+        w.id === id ? { ...w, zIndex: topZ, isMinimized: false } : w
       )
     )
     setTopZ(z => z + 1)
@@ -44,8 +50,7 @@ export function useWindowManager() {
     openWindow,
     bringToFront,
     closeWindow,
+    minimizeWindow,
     resetDesktop,
   }
-
-
 }

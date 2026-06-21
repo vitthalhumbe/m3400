@@ -23,44 +23,53 @@ const apps: {
   label: string
   icon: React.ReactNode
 }[] = [
-  { id: "about", label: "About Me", icon: <User size={22} /> },
-  { id: "skills", label: "Skills", icon: <Wrench size={22} /> },
-  { id: "projects", label: "Projects", icon: <FolderKanban size={22} /> },
-  { id: "mission34", label: "Mission34", icon: <Rocket size={22} /> },
-  // { id: "certifications", label: "Certifications", icon: <Award size={22} /> },
-  { id: "hobbies", label: "Hobbies", icon: <Heart size={22} /> },
-  { id: "contact", label: "Contact", icon: <Mail size={22} /> },
+  { id: "about", label: "About Me", icon: <User size={22} strokeWidth={1.5} /> },
+  { id: "skills", label: "Skills", icon: <Wrench size={22} strokeWidth={1.5} /> },
+  { id: "projects", label: "Projects", icon: <FolderKanban size={22} strokeWidth={1.5} /> },
+  { id: "mission34", label: "Mission 34", icon: <Rocket size={22} strokeWidth={1.5} /> },
+  // { id: "certifications", label: "Certifications", icon: <Award size={22} strokeWidth={1.5} /> },
+  { id: "hobbies", label: "Hobbies", icon: <Heart size={22} strokeWidth={1.5} /> },
+  { id: "contact", label: "Contact", icon: <Mail size={22} strokeWidth={1.5} /> },
 ]
+
 export default function Dock({ onOpen, onHome }: DockProps) {
   return (
-    <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-4 bg-neutral-800/90 backdrop-blur-md px-6 py-3 rounded-2xl z-[9999] border border-white/10 shadow-2xl">
+    <div className="absolute bottom-6 left-1/2 flex -translate-x-1/2 items-center gap-3 rounded-2xl border border-neutral-800 bg-[#0d0d0d]/85 px-4 py-3 shadow-2xl shadow-black/80 ring-1 ring-white/5 backdrop-blur-xl z-[9999]">
       
-      {apps.map(app => (
+      {/* App Icons */}
+      {apps.map((app) => (
         <motion.button
           key={app.id}
           onClick={() => onOpen(app.id)}
-          whileHover={{ y: -5, scale: 1.2 }}
-          transition={{ duration: 0.15, ease: "easeOut" }}
-          className="relative group w-12 h-12 flex items-center justify-center bg-neutral-700/80 rounded-xl hover:bg-neutral-600 transition-colors"
+          whileHover={{ y: -8, scale: 1.25 }}
+          whileTap={{ scale: 0.95 }}
+          transition={{ type: "spring", stiffness: 400, damping: 20 }}
+          className="group relative flex h-12 w-12 items-center justify-center rounded-xl border border-transparent bg-neutral-900/50 text-neutral-400 transition-colors hover:border-neutral-700 hover:bg-neutral-800 hover:text-white"
         >
           {app.icon}
           
-          <span className="absolute -top-12 px-3 py-1.5 bg-neutral-900 text-white/90 text-xs font-medium rounded-lg opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100 transition-all duration-150 pointer-events-none whitespace-nowrap shadow-xl border border-white/10">
+          {/* Tooltip */}
+          <span className="absolute -top-14 pointer-events-none rounded-md border border-neutral-800 bg-neutral-900 px-3 py-1.5 text-xs font-semibold text-neutral-200 opacity-0 shadow-xl transition-all duration-200 translate-y-2 group-hover:translate-y-0 group-hover:opacity-100 whitespace-nowrap">
             {app.label}
           </span>
         </motion.button>
       ))}
-      <div className="w-px h-10 bg-neutral-600 self-center mx-1" />
 
+      {/* Divider */}
+      <div className="mx-1 h-10 w-[1px] rounded-full bg-neutral-800" />
+
+      {/* Desktop/Home Button */}
       <motion.button
         onClick={onHome}
-        whileHover={{ y: -5, scale: 1.2 }}
-        transition={{ duration: 0.15, ease: "easeOut" }}
-        className="relative group w-12 h-12 flex items-center justify-center bg-neutral-900 border border-neutral-600 rounded-xl hover:bg-neutral-700 transition-colors"
+        whileHover={{ y: -8, scale: 1.25 }}
+        whileTap={{ scale: 0.95 }}
+        transition={{ type: "spring", stiffness: 400, damping: 20 }}
+        className="group relative flex h-12 w-12 items-center justify-center rounded-xl border border-neutral-800 bg-neutral-900/80 text-neutral-300 transition-colors hover:border-neutral-600 hover:bg-neutral-800 hover:text-white"
       >
-        <Home size={22} />
+        <Home size={22} strokeWidth={1.5} />
         
-        <span className="absolute -top-12 px-3 py-1.5 bg-neutral-900 text-white/90 text-xs font-medium rounded-lg opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100 transition-all duration-150 pointer-events-none whitespace-nowrap shadow-xl border border-white/10">
+        {/* Tooltip */}
+        <span className="absolute -top-14 pointer-events-none rounded-md border border-neutral-800 bg-neutral-900 px-3 py-1.5 text-xs font-semibold text-neutral-200 opacity-0 shadow-xl transition-all duration-200 translate-y-2 group-hover:translate-y-0 group-hover:opacity-100 whitespace-nowrap">
           Desktop
         </span>
       </motion.button>
