@@ -1,6 +1,6 @@
 "use client"
 
-import { motion } from "framer-motion"
+import { motion, type Variants } from "framer-motion"
 import { Mail, Github, Linkedin, Instagram, ArrowUpRight } from "lucide-react"
 
 // Split the labels into platform and handle for a cleaner, two-line card layout
@@ -32,7 +32,7 @@ const contacts = [
 ]
 
 // Framer Motion variants
-const containerVariants = {
+const containerVariants: Variants = {
   hidden: { opacity: 0 },
   show: {
     opacity: 1,
@@ -40,7 +40,7 @@ const containerVariants = {
   },
 }
 
-const itemVariants = {
+const itemVariants: Variants = {
   hidden: { opacity: 0, y: 20 },
   show: { 
     opacity: 1, 
