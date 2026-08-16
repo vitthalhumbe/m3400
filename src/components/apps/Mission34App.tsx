@@ -34,17 +34,17 @@ export default function Mission34App() {
         <div className="h-full flex flex-col bg-neutral-900/50">
             <Tabs tabs={tabs} activeTab={activeTab} onChange={setActiveTab} onClose={closeTab} />
 
-            <div className="flex-1 overflow-auto p-6 text-sm text-neutral-300 relative">
+            <div className="flex-1 overflow-auto p-4 md:p-6 text-sm text-neutral-300 relative">
                 
                 {/* --- HOME TAB --- */}
                 {activeTab === "home" && (
                     <div className="animate-in fade-in duration-300">
-                        <h2 className="text-2xl font-bold text-white tracking-tight">Mission34 (M34)</h2>
-                            <p className="text-neutral-400 text-sm mt-4 pr-[50%] mb-10">Mission 34 is my long-term build challenge. I decided to build 34 proper, well-documented projects in around 1.5 to 2 years across AI, ML, GenAI, full-stack, and related tech. These are not small practice projects — each one is serious, structured, and portfolio-level. The goal of Mission 34 is to prove my depth as an engineer. Every project will have clean code, proper documentation, GitHub upload, and a dedicated portfolio page. It’s about discipline, consistency, and visible growth — not just learning randomly, but building in a planned way so that by the end, I can clearly show what I’m capable of.</p>
+                        <h2 className="text-lg md:text-2xl font-bold text-white tracking-tight">Mission34 (M34)</h2>
+                            <p className="text-neutral-400 text-xs md:text-sm mt-3 md:mt-4 md:pr-[50%] mb-6 md:mb-10">Mission 34 is my long-term build challenge. I decided to build 34 proper, well-documented projects in around 1.5 to 2 years across AI, ML, GenAI, full-stack, and related tech. These are not small practice projects — each one is serious, structured, and portfolio-level. The goal of Mission 34 is to prove my depth as an engineer. Every project will have clean code, proper documentation, GitHub upload, and a dedicated portfolio page. It’s about discipline, consistency, and visible growth — not just learning randomly, but building in a planned way so that by the end, I can clearly show what I’m capable of.</p>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                             {m34Projects.map(project => (
-                                <motion.div key={project.id} onClick={() => openProjectTab(project)} whileHover={{ scale: 1.01 }} whileTap={{ scale: 0.98 }} className="cursor-pointer rounded-xl border border-neutral-700/50 p-5 bg-gradient-to-br from-neutral-800 to-neutral-900 shadow-lg hover:border-neutral-500 transition-all">
-                                    <h3 className="font-bold text-white text-lg">{project.title}</h3>
+                                <motion.div key={project.id} onClick={() => openProjectTab(project)} whileHover={{ scale: 1.01 }} whileTap={{ scale: 0.98 }} className="cursor-pointer rounded-xl border border-neutral-700/50 p-4 md:p-5 bg-gradient-to-br from-neutral-800 to-neutral-900 shadow-lg hover:border-neutral-500 transition-all">
+                                    <h3 className="font-bold text-white text-base md:text-lg">{project.title}</h3>
                                     <p className="text-neutral-400 mt-2 h-10 line-clamp-2">{project.description}</p>
                                     <div className="flex flex-wrap gap-2 mt-4">
                                         {project.tech.map(t => (
@@ -68,7 +68,7 @@ export default function Mission34App() {
                             </div>
                         )}
 
-                        <h2 className="text-3xl font-bold text-white mb-2">{tab.project.title}</h2>
+                        <h2 className="text-xl md:text-3xl font-bold text-white mb-2">{tab.project.title}</h2>
                         <div className="flex gap-2 mb-6">
                             {tab.project.tech.map(t => (
                                 <span key={t} className="text-xs px-2 py-1 bg-pink-500/20 text-pink-300 rounded border border-pink-500/30">{t}</span>
@@ -94,8 +94,8 @@ export default function Mission34App() {
                             </div>
                         )}
                         <div className="space-y-4">
-                            <h3 className="text-xl font-semibold text-white">Overview</h3>
-                            <p className="leading-relaxed whitespace-pre-line text-lg text-neutral-400">
+                            <h3 className="text-base md:text-xl font-semibold text-white">Overview</h3>
+                            <p className="leading-relaxed whitespace-pre-line text-sm md:text-lg text-neutral-400">
                                 {tab.project.description}
                             </p>
                         </div>

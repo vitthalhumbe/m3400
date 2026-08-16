@@ -63,22 +63,22 @@ const itemVariants: Variants = {
 
 export default function SoftSkills() {
   return (
-    <div className="h-full w-full overflow-y-auto px-6 py-8 md:px-12 md:py-12 bg-[#0a0a0a]">
+    <div className="h-full w-full overflow-y-auto px-4 py-6 md:px-12 md:py-12 bg-[#0a0a0a]">
       <motion.div
         variants={containerVariants}
         initial="hidden"
         animate="show"
-        className="mx-auto max-w-5xl grid grid-cols-1 gap-6 md:grid-cols-2"
+        className="mx-auto max-w-5xl grid grid-cols-1 gap-4 md:gap-6 md:grid-cols-2"
       >
         {softSkills.map((skill) => (
           <motion.div
             key={skill.id}
             variants={itemVariants}
             whileHover={{ y: -4 }}
-            className="group flex flex-col gap-4 rounded-2xl border border-neutral-800 bg-neutral-900/50 p-6 md:p-8 backdrop-blur-sm transition-all duration-300 hover:border-neutral-600 hover:bg-neutral-800/80 hover:shadow-xl hover:shadow-neutral-900/50"
+            className="group flex flex-col gap-3 md:gap-4 rounded-2xl border border-neutral-800 bg-neutral-900/50 p-4 md:p-8 backdrop-blur-sm transition-all duration-300 hover:border-neutral-600 hover:bg-neutral-800/80 hover:shadow-xl hover:shadow-neutral-900/50"
           >
             {/* Card Header */}
-            <h3 className="text-xl font-semibold text-neutral-200 transition-colors duration-300 group-hover:text-white">
+            <h3 className="text-base md:text-xl font-semibold text-neutral-200 transition-colors duration-300 group-hover:text-white">
               {skill.title}
             </h3>
             
@@ -86,7 +86,7 @@ export default function SoftSkills() {
             <div className="h-[2px] w-12 bg-gradient-to-r from-neutral-700 to-transparent transition-all duration-500 group-hover:w-full group-hover:from-blue-500 group-hover:to-transparent" />
             
             {/* Card Content */}
-            <p className="text-base leading-relaxed text-neutral-400 transition-colors duration-300 group-hover:text-neutral-300">
+            <p className="text-sm md:text-base leading-relaxed text-neutral-400 transition-colors duration-300 group-hover:text-neutral-300">
               {skill.description}
             </p>
           </motion.div>

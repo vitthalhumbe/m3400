@@ -22,7 +22,7 @@ export default function Tabs({
   onClose,
 }: TabsProps) {
   return (
-    <div className="flex gap-1 border-b border-neutral-700 px-2 py-2">
+    <div className="flex gap-1 border-b border-neutral-700 px-2 py-2 overflow-x-auto whitespace-nowrap">
       {tabs.map(tab => {
         const isActive = activeTab === tab.id
 

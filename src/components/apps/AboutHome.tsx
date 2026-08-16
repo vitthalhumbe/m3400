@@ -4,9 +4,9 @@ import { Terminal, Cpu, LayoutTemplate } from "lucide-react"
 
 export default function AboutHome() {
   return (
-    <div className="h-full w-full p-8 flex flex-col md:flex-row items-center justify-center gap-12 overflow-auto">
+    <div className="h-full w-full p-4 md:p-8 flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 overflow-auto">
       
-      <div className="w-64 h-64 shrink-0 rounded-2xl border border-neutral-700/50 bg-neutral-800/50 shadow-2xl overflow-hidden relative group">
+      <div className="w-40 h-40 md:w-64 md:h-64 shrink-0 rounded-2xl border border-neutral-700/50 bg-neutral-800/50 shadow-2xl overflow-hidden relative group">
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10" />
         <img
           src="/me.png"
@@ -23,15 +23,15 @@ export default function AboutHome() {
             <Terminal size={14} /> Root User
         </div>
         
-        <h1 className="text-5xl md:text-7xl font-bold text-white tracking-tight mb-2">
+        <h1 className="text-3xl md:text-7xl font-bold text-white tracking-tight mb-2">
           Vitthal Humbe
         </h1>
 
-        <p className="text-xl text-neutral-400 font-mono mb-6">
+        <p className="text-base md:text-xl text-neutral-400 font-mono mb-6">
           Full-Stack Web Developer & AI Enthusiast
         </p>
 
-        <p className="text-base leading-relaxed text-neutral-300 mb-8 bg-neutral-800/30 p-6 rounded-xl border border-white/5 shadow-inner">
+        <p className="text-sm md:text-base leading-relaxed text-neutral-300 mb-8 bg-neutral-800/30 p-4 md:p-6 rounded-xl border border-white/5 shadow-inner">
           I am a Computer Science student passionate about building real-world applications and systems in AIML and software engineering. Currently executing <strong>"Mission34"</strong>—a personal initiative to build and document 34 unique, high-impact projects. I prefer understanding core systems deeply, starting with architecture and organizing step-by-step.
         </p>
         <div className="flex flex-wrap gap-3">

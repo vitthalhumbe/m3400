@@ -48,10 +48,10 @@ export default function AboutStory() {
     const Icon = current?.icon
 
     return (
-        <div className="flex h-full w-full bg-neutral-900/30">
-            <div className="w-64 shrink-0 px-4 py-6 border-r border-neutral-700/50 bg-neutral-900/50">
-                <div className="text-xs font-bold text-neutral-500 uppercase tracking-widest mb-4 px-3">System Logs</div>
-                <div className="flex flex-col gap-1">
+        <div className="flex flex-col md:flex-row h-full w-full bg-neutral-900/30">
+            <div className="shrink-0 px-3 py-3 md:w-64 md:px-4 md:py-6 border-b md:border-b-0 md:border-r border-neutral-700/50 bg-neutral-900/50">
+                <div className="hidden md:block text-xs font-bold text-neutral-500 uppercase tracking-widest mb-4 px-3">System Logs</div>
+                <div className="flex md:flex-col gap-1 overflow-x-auto md:overflow-visible">
                     {sections.map(section => {
                         const SectionIcon = section.icon;
                         const isActive = activeSection === section.id;
@@ -59,42 +59,42 @@ export default function AboutStory() {
                             <button
                                 key={section.id}
                                 onClick={() => setActiveSection(section.id)}
-                                className={`flex items-center gap-3 w-full text-left px-3 py-2.5 rounded-lg transition-all text-sm font-medium ${
+                                className={`flex items-center gap-2 md:gap-3 shrink-0 md:w-full text-left px-3 py-2 md:py-2.5 rounded-lg transition-all text-xs md:text-sm font-medium whitespace-nowrap ${
                                     isActive
                                         ? "bg-violet-500/20 text-violet-300"
                                         : "text-neutral-400 hover:bg-neutral-800 hover:text-neutral-200"
                                 }`}
                             >
-                                <SectionIcon size={16} className={isActive ? "text-violet-400" : "text-neutral-500"} />
+                                <SectionIcon size={14} className={isActive ? "text-violet-400" : "text-neutral-500"} />
                                 {section.title}
                             </button>
                         )
                     })}
                 </div>
             </div>
-            <div className="flex-1 overflow-y-auto px-10 py-10 bg-[#1e1e1e]">
+            <div className="flex-1 overflow-y-auto px-4 py-6 md:px-10 md:py-10 bg-[#1e1e1e]">
                 <div className="max-w-3xl mx-auto">
-                    <div className="flex items-center gap-4 mb-8 border-b border-neutral-700/50 pb-6">
-                        {Icon && <div className="p-3 bg-neutral-800 rounded-xl border border-neutral-700 shadow-sm"><Icon size={28} className="text-white"/></div>}
-                        <h2 className="text-4xl font-bold text-white tracking-tight">
+                    <div className="flex items-center gap-3 md:gap-4 mb-6 md:mb-8 border-b border-neutral-700/50 pb-4 md:pb-6">
+                        {Icon && <div className="p-2 md:p-3 bg-neutral-800 rounded-xl border border-neutral-700 shadow-sm"><Icon size={22} className="text-white md:hidden"/><Icon size={28} className="text-white hidden md:block"/></div>}
+                        <h2 className="text-2xl md:text-4xl font-bold text-white tracking-tight">
                             {current?.title}
                         </h2>
                     </div>
 
 
                     <div className="prose prose-invert max-w-none">
-                        <p className="whitespace-pre-line text-lg leading-loose text-neutral-300">
+                        <p className="whitespace-pre-line text-sm md:text-lg leading-relaxed md:leading-loose text-neutral-300">
                             {current?.content}
                         </p>
                     </div>
 
                     {current?.title === "Building" && (
-                        <div className="mt-12 p-6 bg-violet-500/10 border border-violet-500/20 rounded-xl flex items-center gap-4">
-                            <span className="relative flex h-3 w-3">
+                        <div className="mt-8 md:mt-12 p-4 md:p-6 bg-violet-500/10 border border-violet-500/20 rounded-xl flex items-center gap-4">
+                            <span className="relative flex h-3 w-3 shrink-0">
                               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-violet-400 opacity-75"></span>
                               <span className="relative inline-flex rounded-full h-3 w-3 bg-violet-500"></span>
                             </span>
-                            <p className="text-xl font-mono text-violet-400">
+                            <p className="text-base md:text-xl font-mono text-violet-400">
                                 To Be Continued...
                             </p>
                         </div>

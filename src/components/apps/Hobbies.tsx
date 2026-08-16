@@ -80,10 +80,10 @@ const hobbies = [
 
 export default function Hobbies() {
   return (
-    <div className="h-full flex flex-col p-6 overflow-auto bg-neutral-900/50">
-      <div className="mb-8">
-        <h2 className="text-3xl font-bold text-white tracking-tight">Beyond the Screen</h2>
-        <p className="text-neutral-400 text-sm mt-2 max-w-xl leading-relaxed">
+    <div className="h-full flex flex-col p-4 md:p-6 overflow-auto bg-neutral-900/50">
+      <div className="mb-6 md:mb-8">
+        <h2 className="text-xl md:text-3xl font-bold text-white tracking-tight">Beyond the Screen</h2>
+        <p className="text-neutral-400 text-xs md:text-sm mt-2 max-w-xl leading-relaxed">
           When I am not writing code or building systems, I spend my time exploring creativity, strategy, and continuous learning through these offline pursuits.
         </p>
       </div>

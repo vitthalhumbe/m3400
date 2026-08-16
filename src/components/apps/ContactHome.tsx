@@ -51,19 +51,19 @@ const itemVariants: Variants = {
 
 export default function ContactHome() {
   return (
-    <div className="flex h-full w-full flex-col items-center justify-center overflow-y-auto bg-[#0a0a0a] px-6 py-12 md:px-12">
+    <div className="flex h-full w-full flex-col items-center justify-center overflow-y-auto bg-[#0a0a0a] px-4 py-8 md:px-12 md:py-12">
       <motion.div
         variants={containerVariants}
         initial="hidden"
         animate="show"
-        className="flex w-full max-w-4xl flex-col items-center space-y-12 md:space-y-16"
+        className="flex w-full max-w-4xl flex-col items-center space-y-8 md:space-y-16"
       >
         {/* Centered Typography Header */}
-        <motion.div variants={itemVariants} className="max-w-2xl text-center space-y-6">
-          <h1 className="text-4xl font-bold tracking-tight text-white md:text-5xl lg:text-6xl">
+        <motion.div variants={itemVariants} className="max-w-2xl text-center space-y-3 md:space-y-6">
+          <h1 className="text-2xl font-bold tracking-tight text-white md:text-5xl lg:text-6xl">
             Let's get in touch.
           </h1>
-          <p className="text-lg text-neutral-400">
+          <p className="text-sm md:text-lg text-neutral-400">
             Want to collaborate, discuss a project, or just want to say hello? My inbox is always open.
           </p>
         </motion.div>

@@ -6,6 +6,8 @@ import Dock from "./Dock"
 import AppWindow from "@/components/windows/AppWindow"
 import { FileText, Github, Pause, Music, SkipBack, SkipForward, Play, Linkedin, MapPin, CheckCircle2, Info, RefreshCw, Monitor, Code, LayoutGrid } from "lucide-react"
 import backgroundImg from "@/assets/images/Background.png"
+import { useIsMobile } from "@/hooks/useIsMobile"
+import MobileOS from "@/components/mobile/MobileOS"
 
 const LeetCodeIcon = ({ size = 24, className = "" }) => (
   <svg
@@ -35,6 +37,7 @@ const DesktopShortcut = ({ icon: Icon, label, color = "text-blue-400", onClick }
 )
 
 export default function Desktop() {
+  const isMobile = useIsMobile()
   const { windows, openWindow, bringToFront, closeWindow, resetDesktop } = useWindowManager()
 
   const [time, setTime] = useState(new Date())
@@ -118,6 +121,9 @@ export default function Desktop() {
         break
     }
   }
+
+  if (isMobile === null) return null
+  if (isMobile) return <MobileOS />
 
   return (
     <div className="relative h-screen w-screen overflow-hidden bg-[#050505] font-sans text-white select-none selection:bg-pink-500 selection:text-white">
