@@ -28,11 +28,11 @@ export default function AboutHome() {
         </h1>
 
         <p className="text-base md:text-xl text-neutral-400 font-mono mb-6">
-          Full-Stack Web Developer & AI Enthusiast
+          System Designer & AI Engineer
         </p>
 
         <p className="text-sm md:text-base leading-relaxed text-neutral-300 mb-8 bg-neutral-800/30 p-4 md:p-6 rounded-xl border border-white/5 shadow-inner">
-          I am a Computer Science student passionate about building real-world applications and systems in AIML and software engineering. Currently executing <strong>"Mission34"</strong>—a personal initiative to build and document 34 unique, high-impact projects. I prefer understanding core systems deeply, starting with architecture and organizing step-by-step.
+          I’m a Computer Science student passionate about building real-world applications and systems in AI/ML and software engineering. I’m currently working on “Mission34,” a personal initiative where I aim to build and document 34 unique, high-impact projects. I enjoy understanding how things work at their core, so I like to start with the architecture, break systems down into smaller parts, and build them step by step.
         </p>
         <div className="flex flex-wrap gap-3">
           <div className="flex items-center gap-2 rounded-lg bg-neutral-800 border border-neutral-700 px-4 py-2 text-sm text-neutral-200 shadow-sm hover:bg-neutral-700 transition-colors">

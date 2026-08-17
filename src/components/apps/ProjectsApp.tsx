@@ -46,45 +46,23 @@ export default function ProjectsApp() {
                             <p className="text-neutral-400 text-xs md:text-sm mt-3 md:pr-[50%]">They are different from my Mission 34 projects, which are bigger and long-term. SPs are like quick execution practice — build fast, learn fast, document shortly, and move to the next. I number them like SP-001, SP-002 and keep stacking them. Over time, these small projects improve my fundamentals, confidence, and consistency as an engineer.</p>
                         </div>
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
                             {spProjects.map(project => (
-                                <motion.div
+                                <motion.button
                                     key={project.id}
                                     onClick={() => openProjectTab(project)}
-                                    whileHover={{ y: -2 }}
-                                    className="cursor-pointer rounded-xl border border-neutral-700/50 p-3 md:p-4 bg-neutral-800/50 hover:bg-neutral-800 transition-colors flex flex-col justify-between"
+                                    whileHover={{ scale: 1.02 }}
+                                    whileTap={{ scale: 0.97 }}
+                                    className="aspect-square w-full overflow-hidden rounded-4xl border border-neutral-700/50 bg-neutral-900 shadow-lg"
                                 >
-                                    <div className="flex gap-3 md:gap-4">
-                                        <div className="w-12 h-12 md:w-16 md:h-16 shrink-0 bg-neutral-900 rounded-[15px] border border-neutral-700 flex items-center justify-center overflow-hidden relative">
-                                            {project.image ? (
-                                                <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
-                                            ) : (
-                                                <ImageIcon className="text-neutral-600" size={20} />
-                                            )}
+                                    {project.image ? (
+                                        <img src={project.image} alt={project.title} className="h-full w-full object-cover" />
+                                    ) : (
+                                        <div className="flex h-full w-full items-center justify-center">
+                                            <ImageIcon className="text-neutral-600" size={28} />
                                         </div>
-                                        
-                                        <div className="flex-1">
-                                            <div className="flex justify-between items-start mb-1">
-                                                <span className="text-xs font-mono text-pink-400 bg-pink-400/10 px-2 py-0.5 rounded">{project.id}</span>
-                                                {project.status === "Completed" && <span className="w-2 h-2 rounded-full bg-green-500 shadow-[0_0_8px_rgba(34,197,94,0.8)]"></span>}
-                                                {project.status === "Not started" && <span className="w-2 h-2 rounded-full bg-yellow-500 shadow-[0_0_8px_rgba(34,197,94,0.8)]"></span>}
-                                            </div>
-                                            <h3 className="font-semibold text-white text-sm md:text-lg leading-tight">{project.title}</h3>
-                                        </div>
-                                    </div>
-
-                                    <p className="text-neutral-400 text-sm mt-4 leading-relaxed line-clamp-2">{project.description}</p>
-
-                                    <div className="mt-4 pt-4 border-t border-neutral-700/50 flex justify-between items-center">
-                                        <div className="flex flex-wrap gap-2">
-                                            {project.tech.map(t => (
-                                                <span key={t} className="text-[10px] font-medium px-2 py-1 bg-neutral-900 text-neutral-300 rounded uppercase tracking-wider">
-                                                    {t}
-                                                </span>
-                                            ))}
-                                        </div>
-                                    </div>
-                                </motion.div>
+                                    )}
+                                </motion.button>
                             ))}
                         </div>
                     </div>
